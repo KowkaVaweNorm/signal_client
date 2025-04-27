@@ -1,8 +1,6 @@
 export enum AppRoutes {
   MAIN = 'main',
-  CITY = 'city',
-  BATTLE = 'battle',
-  QUESTS = 'quests',
+  EXPLORE = 'explore',
   SETTINGS = 'settings',
   ABOUT = 'about',
   ADMIN_PANEL = 'admin_panel',
@@ -10,10 +8,8 @@ export enum AppRoutes {
   NOT_FOUND = 'not_found',
 }
 
-export const getRouteMain = () => '/';
-export const getRouteCity = () => '/city';
-export const getRouteBattle = () => '/battle';
-export const getRouteQuests = () => '/quests';
+export const getRouteMain = () => '/1';
+export const getRouteExplore = () => '/';
 export const getRouteSettings = () => '/settings';
 export const getRouteAbout = () => '/about';
 export const getRouteAdmin = () => '/admin';
@@ -21,9 +17,7 @@ export const getRouteForbidden = () => '/forbidden';
 
 export const AppRouteByPathPattern: Record<string, AppRoutes> = {
   [getRouteMain()]: AppRoutes.MAIN,
-  [getRouteCity()]: AppRoutes.CITY,
-  [getRouteBattle()]: AppRoutes.BATTLE,
-  [getRouteQuests()]: AppRoutes.QUESTS,
+  [getRouteExplore()]: AppRoutes.EXPLORE,
   [getRouteSettings()]: AppRoutes.SETTINGS,
   [getRouteAbout()]: AppRoutes.ABOUT,
   [getRouteAdmin()]: AppRoutes.ADMIN_PANEL,

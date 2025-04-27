@@ -1,14 +1,12 @@
-import { City } from 'pages/City';
+import { Explore } from 'pages/Explore';
 import { type AppRoutesProps } from '@/shared/types/router';
 import {
   AppRoutes,
   getRouteAbout,
   getRouteAdmin,
-  getRouteBattle,
-  getRouteCity,
+  getRouteExplore,
   getRouteForbidden,
   getRouteMain,
-  getRouteQuests,
   getRouteSettings,
 } from 'shared/const/router';
 
@@ -16,18 +14,6 @@ export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
   [AppRoutes.MAIN]: {
     path: getRouteMain(),
     element: <>MainPage</>,
-  },
-  [AppRoutes.CITY]: {
-    path: getRouteCity(),
-    element: <City />,
-  },
-  [AppRoutes.BATTLE]: {
-    path: getRouteBattle(),
-    element: <>Battle</>,
-  },
-  [AppRoutes.QUESTS]: {
-    path: getRouteQuests(),
-    element: <>Quests</>,
   },
   [AppRoutes.SETTINGS]: {
     path: getRouteSettings(),
@@ -52,5 +38,9 @@ export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
   [AppRoutes.NOT_FOUND]: {
     path: '*',
     element: <>Not Found page</>,
+  },
+  [AppRoutes.EXPLORE]: {
+    path: getRouteExplore(),
+    element: <Explore />,
   },
 };
